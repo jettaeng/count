@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            font-size: 10em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="number">텍스트</h2>
+    </div>
+    <script>
+        const number = document.querySelector('.number');
+        let i = 1200;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            i -=11;
+            if(i <= 0) {
+                i = 0;
+                return;
+            }
+            number.innerHTML = i;
+        }
+        animate();
+    </script>
+</body>
+</html>
